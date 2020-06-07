@@ -211,23 +211,19 @@ void detKeypointsModern(std::vector<cv::KeyPoint> &keypoints, cv::Mat &img, std:
         cv::FastFeatureDetector::DetectorType type = cv::FastFeatureDetector::TYPE_9_16;
         detector = cv::FastFeatureDetector::create(threshold, bNMS, type); 
     }
-
-    if (detectorType.compare("BRISK") == 0)
+    else if (detectorType.compare("BRISK") == 0)
     {
         detector = cv::BRISK::create();
     }
-
-    if (detectorType.compare("ORB") == 0)
+    else if (detectorType.compare("ORB") == 0)
     {
         detector = cv::ORB::create();
     }
-
-    if (detectorType.compare("AKAZE") == 0)
+    else if (detectorType.compare("AKAZE") == 0)
     {
         detector = cv::AKAZE::create();
     }
-
-    if (detectorType.compare("SIFT") == 0)
+    else if (detectorType.compare("SIFT") == 0)
     {
         detector = cv::xfeatures2d::SIFT::create();
     }

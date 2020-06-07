@@ -123,7 +123,7 @@ int main(int argc, const char *argv[])
                 {
                     cv::KeyPoint point;
                     point.pt = it->pt;
-                    //point.size = 1;
+                    point.size = 1;
                     keypoints_ROI.push_back(point);
                 }
             }
